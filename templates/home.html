@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block body %}
+{% include "navbar.html" %}
+<section class="hero is-primary is-bold is-large">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Please Enter Your YouTube Link:
+      </h1>
+      <form action="/process" method="POST">
+        <input class="input is-danger is-rounded" type="text" name="firstname" placeholder="Example: https://www.youtube.com/watch?v=oaClNfNxzPU">
+        <br></br>
+        <input class="button is-link is-primary" type="submit" value="Submit">
+      </form>
+    </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="../static/js/scripts.js"></script>
+{% endblock %}
