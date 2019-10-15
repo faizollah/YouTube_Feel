@@ -1,20 +1,15 @@
-# ML MIDTERM FLASK (AND MAYBE REACT) PROJECT!!!
+# YouTube Feel - Analysis of Videos' Comments
 ------
-based on flaskex but with a bunch of stuff.
+This project is hosted on free plan of Heroku. It goes to sleep after certain time of inactivity. Please be patient when visiting the website.
 
-on a development environment you need to get the config from firebase. 
-The Heroku is setup to deploy everytime there is a git push on the master 
-branch of this repository but it already has the productin environment variables
-so there's nothing to do there. I will add team members to all the accounts.
+This application was implemented using Python's Flask framework.
 
+Upon signing up, which is implemented using Firebase, the user is directed to the payment page. The payment is processed using Stripe.
 
-to get it running in a local dev environment:
-```sh
-$ git clone git@github.com:ML-Midterm-Finance/ml-midterm-flask.git
+After the payment is successful, a token and email address is stored in Firestore as a record. 
 
-$ cd ml-midterm-flask
+The user is then directed to the page where a link to YouTube video is required. The application pulls the video's comments and performs sentiment analysis on the data. The result is then displayed in form of positive and negative percentage.
 
-$ pip install -r requirements.txt
+At this point it only shows the percentage. We are working on providing more analysis like wordcloud figure.
 
-$ python app.py
-```
+This work was done by Ali Feizollah individually.
